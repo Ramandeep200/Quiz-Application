@@ -1,0 +1,142 @@
+let questions = [
+    {
+        question: "In Python 3, the maximum value for an integer is 263 - 1:",
+        options: [
+            "True",
+            "False"
+        ],
+        answer: 1
+    },
+    {
+        question: "Which of the following is false statement in python?",
+        options: [
+         
+
+       "int(144)==144",
+       "int('144')==144",
+       "int(144.0)==144",
+       " None of the above"
+
+
+        ],
+        answer: 3
+    },
+    {
+        question: "Which operator is right-associative?",
+        options: [
+            " *",
+
+           " =",
+
+             " +",
+
+             " %"
+
+
+        ],
+        answer: 1
+    },
+    {
+        question: "What is output for −2 * 2 **3?",
+        options: [
+            "12",
+            "64",
+            "16",
+            "36"
+        ],
+        answer: 2
+    },
+    {
+        question: 'Select the correct function among them which can be used to write the data to perform for a binary output?',
+options: [
+
+
+         'Write',
+
+       'Output.binary',
+
+          'Dump',
+
+      'Binary.output'
+
+
+                            ],
+        answer: 2
+    },
+    {
+        question: 'Suppose we are given with two sets(s1&s2) then what is the output of the code −S1 + S2 ?',
+        options: [
+            'Adds the elements of the both the sets.',
+
+              'Removes the repeating elements and adds both the sets.',
+
+            'It is an illegal command.',
+
+               'Output will be stored in S1.'
+        ],
+        answer: 2
+    },
+    {
+        question: 'Which module is used in python to create Graphics?',
+options: [
+
+ 'Turtle',
+
+'Canvas',
+
+'Tkinter',
+
+'Graphics'
+        
+      ],              ],
+        answer: 0
+    },
+    {
+        question: 'Syntax error in python is detected by _________at _______',
+        options:[ 
+
+ 'compiler/ compile time',
+
+'interpreter/ run time',
+
+'compiler/ run time',
+
+'interpreter/ compile time'            
+        ],
+        answer: 1
+    },
+    {
+        question: 'What is output of following −
+
+print(''abbzxyzxzxabb''.count(‘abb’,-10,-1))',
+options: [
+
+
+'2',
+ '0',
+'1',
+'Error'
+ 
+        ],
+        answer: 1
+    },
+    {
+        question: "What is the output of the following code?",
+options: [
+def f(x = 100, y = 100): 
+   return(x+y, x-y) 
+x, y = f(y = 200, x = 100) 
+print(x, y) 
+ "300 -100",
+
+ "200 0",
+
+ "200 100",
+
+ "0 300"
+        
+            
+        ],
+        answer: 0
+    }
+];
