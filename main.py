@@ -1,44 +1,47 @@
-from flask import Flask, render_template, request, session, redirect
+from flask import Flask, render_template, request, session, redirect, url_for
 import pymongo
 import jinja2
-import bcrypt
 
 app = Flask(__name__)
 # MongoDb Connection
 
 connection_String = "mongodb+srv://anirudh:anirudh55@cluster0.0qqke.mongodb.net/db_quiz?retryWrites=true&w=majority"
 my_client = pymongo.MongoClient(connection_String)
-db = my_client.db_quiz
-Quiz = []
+db = my_client.db_quiz  # database
+Quiz = []  # collection
 
 
 @app.route('/', methods=["GET", "POST"])
-
 @app.route('/index/')
 def index():
     return render_template("index.html")
 
 
-@app.route('/login_signup/')
-def login_signup():
-    if request.method == "POST":
+@app.route('/signup/', methods=["GET", "POST"])
+def signup():
+    if request.method == "GET":
         name = request.form.get("fname")
-        email = request.form.get("emailid")
-        password = request.form.get("pwd")
+        email = request.form.get("email")
+        password = request.form.get("pass")
 
         print(name, email, password)
         db.Quizs.insert_one({"name": name, "email": email, "password": password})
-    return render_template("login_signup.html")
+    return render_template("SigninPage.html")
+
+
+@app.route('/login/', methods=["GET", "POST"])
+def login():
+    if request.method == 'POST':
+        email = request.form.get('email')
+        password = request.form.get('pass')
+
+        user_found = Quiz.findone({"email": email, "password": password})  # fetches
+    return render_template("LoginPage.html")
 
 
 @app.route('/courses/')
 def courses():
     return render_template('courses.html')
-
-
-@app.route('/PythonQuiz/', methods=["GET", "POST"])
-def python():
-    return render_template('PythonQuiz.html')
 
 
 @app.route('/JavaQuiz/')
